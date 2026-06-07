@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Encontre uma Célula | Igreja Batista Vida Plena</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#001478",
+                        "outline-variant": "#c6c5d4",
+                        "on-secondary-fixed-variant": "#8a0061",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#bbc3ff",
+                        "outline": "#767683",
+                        "tertiary": "#071300",
+                        "primary-fixed-dim": "#bbc3ff",
+                        "on-tertiary-fixed": "#0f2000",
+                        "surface-tint": "#4856b3",
+                        "surface-container-highest": "#e1e2e5",
+                        "inverse-on-surface": "#f0f1f4",
+                        "on-tertiary-fixed-variant": "#2d5000",
+                        "secondary": "#b40081",
+                        "on-primary-container": "#7785e5",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#152a00",
+                        "surface-bright": "#f8f9fc",
+                        "on-surface": "#191c1e",
+                        "on-secondary-fixed": "#3c0029",
+                        "secondary-fixed-dim": "#ffafd7",
+                        "surface-container": "#edeef1",
+                        "surface-variant": "#e1e2e5",
+                        "surface-container-high": "#e7e8eb",
+                        "on-primary": "#ffffff",
+                        "surface": "#f8f9fc",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#ffd8e9",
+                        "primary-fixed": "#dfe0ff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#5d9c00",
+                        "surface-dim": "#d9dadd",
+                        "on-background": "#191c1e",
+                        "inverse-surface": "#2e3133",
+                        "on-primary-fixed-variant": "#2e3d99",
+                        "background": "#f8f9fc",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#000741",
+                        "on-surface-variant": "#454652",
+                        "tertiary-fixed-dim": "#8adc24",
+                        "surface-container-low": "#f2f3f6",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#000e5f",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#fe48bc",
+                        "tertiary-fixed": "#a5f944",
+                        "on-secondary-container": "#5a003e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "label-bold": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+        }
+
+        .radiant-bg {
+            background: radial-gradient(circle at top right, #F0C80022, transparent 50%),
+                radial-gradient(circle at bottom left, #DC28A022, transparent 50%),
+                white;
+        }
+
+        .cell-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -10px rgba(0, 20, 120, 0.15);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body class="bg-background font-body-md text-on-surface antialiased radiant-bg min-h-screen">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-md shadow-sm border-b border-white/20 transition-all duration-300 font-['Plus_Jakarta_Sans'] antialiased">
+        <div class="max-w-[1200px] mx-auto flex justify-between items-center px-4 md:px-8 h-20">
+            <div class="flex items-center gap-3">
+                <img alt="Logo Igreja Batista Vida Plena" class="w-10 h-10 rounded-full object-contain" src="logo.png" />
+                <span class="font-bold text-lg sm:text-xl tracking-tight text-primary">Igreja Batista Vida Plena</span>
+            </div>
+            <div class="hidden lg:flex items-center gap-8">
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="ibvp.html">Início</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="informativos.html">Informativos</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="estudos.html">Estudos Bíblicos</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="missoes.html">Missões</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="ministerios.html">Ministérios</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="sobrenos.html">Sobre Nós</a>
+            </div>
+            <a href="https://www.youtube.com/live/Hw3CnwEE_70?si=5q4g02qYWn1anIHM" target="_blank" rel="noopener noreferrer"
+                class="hidden lg:flex bg-primary-container text-white px-6 py-2.5 rounded-full font-bold hover:scale-105 transition-transform shadow-lg items-center justify-center text-sm">
+                Assista ao vivo
+            </a>
+            <button class="lg:hidden text-primary p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg pb-4">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="ibvp.html">Início</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="informativos.html">Informativos</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="estudos.html">Estudos Bíblicos</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="missoes.html">Missões</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="ministerios.html">Ministérios</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="sobrenos.html">Sobre Nós</a>
+                <a href="https://www.youtube.com/live/Hw3CnwEE_70?si=5q4g02qYWn1anIHM" target="_blank" rel="noopener noreferrer"
+                    class="bg-primary-container text-white px-6 py-3 rounded-full font-bold text-center mt-4">
+                    Assista ao vivo
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-20 overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-10">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-[#F0C800] rounded-full blur-[100px]"></div>
+                <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#DC28A0] rounded-full blur-[100px]"></div>
+            </div>
+            <div class="container-max mx-auto px-gutter relative z-10 text-center">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-bold text-sm mb-6">
+                    <span class="material-symbols-outlined text-sm">home</span>
+                    Vida em Comunidade
+                </div>
+                <h1 class="font-headline-xl text-headline-xl text-primary mb-6">Nossas Células</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                    As células são o coração da nossa igreja. É onde a vida cristã acontece no dia a dia, nos lares,
+                    compartilhando a Palavra, o pão e a vida em família.
+                </p>
+                <!-- Search & Filter Bar -->
+                <div
+                    class="max-w-4xl mx-auto bg-white p-2 rounded-2xl shadow-xl border border-slate-100 flex flex-col md:flex-row gap-2">
+                    <div class="flex-1 flex items-center px-4 gap-3 bg-surface-container-low rounded-xl">
+                        <span class="material-symbols-outlined text-outline">search</span>
+                        <input id="search-input" class="w-full bg-transparent border-none focus:ring-0 py-4 font-body-md text-on-surface"
+                            placeholder="Buscar por nome ou endereço..." type="text" />
+                    </div>
+                    <div class="md:w-48 flex items-center px-4 gap-3 bg-surface-container-low rounded-xl">
+                        <span class="material-symbols-outlined text-outline">calendar_today</span>
+                        <select id="day-filter"
+                            class="w-full bg-transparent border-none focus:ring-0 py-4 font-body-md text-on-surface appearance-none">
+                            <option value="">Todos os dias</option>
+                            <option value="segunda">Segunda-Feira</option>
+                            <option value="terca">Terça-Feira</option>
+                            <option value="quarta">Quarta-Feira</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Cells Grid -->
+        <section class="pb-section-gap">
+            <div class="container-max mx-auto px-gutter">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Célula 1: Jeová Nissi -->
+                    <div data-day="segunda"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Segunda-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">Jeová Nissi</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:30</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Rua Dr. Manoel Reis, nº 1427 - Casa 33</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20Jeov%C3%A1%20Nissi." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Célula 2: A Grande Família -->
+                    <div data-day="segunda"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Segunda-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">A Grande Família</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:30</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Rua Mário de Araújo, 1449 - Interfone 2101</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20A%20Grande%20Fam%C3%ADlia." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Célula 3: Transformados Por Cristo -->
+                    <div data-day="segunda"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Segunda-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">Transformados Por Cristo</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:00</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Est. Marechal Castelo Branco, nº 1033</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20Transformados%20Por%20Cristo." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Célula 4: Emanuel -->
+                    <div data-day="segunda"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Segunda-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">Emanuel</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:00</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Rua Neli, nº 82 - Chatuba</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20Emanuel." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Célula 5: Semeando -->
+                    <div data-day="terca"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Terça-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">Semeando</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:30</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Rua Guimar Azevedo, nº 80 - Chatuba</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20Semeando." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Célula 6: ALPHA -->
+                    <div data-day="terca"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Terça-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">ALPHA</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:30</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Rua Dr. Manoel Reis, nº 1427 - Casa 33</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20Alpha." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Célula 7: Entre Amigos -->
+                    <div data-day="terca"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Terça-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">Entre Amigos</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:30</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Rua Sargento Pinto, 47. Apto 101 - Centro Nilópolis</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20Entre%20Amigos." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Célula 8: Sempre Juntos -->
+                    <div data-day="terca"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Terça-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">Sempre Juntos</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:30</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Rua Antonio Félix, nº 1497 - Casa 45</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20Sempre%20Juntos." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Célula 9: Frutificação -->
+                    <div data-day="terca"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Terça-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">Frutificação</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:30</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Rua Porto Alegre, 76 - Nossa Senhora de Fátima</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20Frutifica%C3%A7%C3%A3o." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Célula 10: Fonte de Vida -->
+                    <div data-day="quarta"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Quarta-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">Fonte de Vida</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:30</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Rua João Ferreira Alves, Casa 16, Fica na Eliseu de Alvarenga, nº1707</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20Fonte%20de%20Vida." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Célula 11: Ide -->
+                    <div data-day="quarta"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Quarta-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">Ide</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:00</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Rua Roldão Gonçalves, nº 1961</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20Ide." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Célula 12: Zoé -->
+                    <div data-day="quarta"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Quarta-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">Zoé</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:00</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Est. Marechal Castelo Branco, nº 960 - Casa 9</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20Zo%C3%A9." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Célula 13: Belém -->
+                    <div data-day="quarta"
+                        class="cell-card bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm transition-all duration-300 flex flex-col h-full group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-2xl bg-primary-fixed text-primary">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-bold font-label-bold">Quarta-Feira</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">Belém</h3>
+                        <div class="space-y-4 mb-8 flex-grow">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">schedule</span>
+                                <span class="text-body-md font-medium">19:00</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-pink-600">location_on</span>
+                                <span class="text-body-md leading-relaxed">Rua Eliseu de Alvarenga, nº 1419</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20participar%20da%20C%C3%A9lula%20Bel%C3%A9m." 
+                           target="_blank" 
+                           class="w-full bg-[#DC28A0] text-white py-4 rounded-xl font-label-bold text-label-bold shadow-md hover:bg-[#b40081] transition-colors flex items-center justify-center gap-2">
+                            Quero Participar
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to Action Section -->
+        <section
+            class="py-section-gap bg-primary-container relative overflow-hidden rounded-[40px] mx-4 md:mx-gutter mb-section-gap">
+            <div class="absolute inset-0 opacity-20">
+                <div
+                    class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-pink-400 to-transparent rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2">
+                </div>
+            </div>
+            <div class="container-max mx-auto px- gutter relative z-10 text-center">
+                <h2 class="font-headline-lg text-headline-lg text-white mb-6">Quer abrir sua casa para uma célula?</h2>
+                <p class="text-on-primary-container font-body-lg mb-10 max-w-xl mx-auto">Seja um anfitrião e permita que
+                    a presença de Deus se espalhe através do seu lar e da sua hospitalidade.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/5521969513547?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20como%20abrir%20uma%20c%C3%A9lula%20na%20minha%20casa."
+                       target="_blank"
+                       class="inline-block bg-white text-primary-container px-10 py-4 rounded-full font-label-bold text-label-bold hover:scale-105 transition-transform shadow-lg text-center">
+                        Fale com os Pastores
+                    </a>
+                    <button
+                        class="border-2 border-white/30 text-white px-10 py-4 rounded-full font-label-bold text-label-bold hover:bg-white/10 transition-colors">Saiba
+                        Mais</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-12 bg-blue-950 text-white font-['Plus_Jakarta_Sans'] text-sm border-t border-white/10">
+        <div
+            class="max-w-[1200px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+            <div>
+                <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                    <img alt="Footer Logo" class="h-10 brightness-0 invert"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1k5qVW2IDEGBhZy1Js6ayYna7PxTTn4UWEL9Ay4Syt0za6x3o-lbSyG1NzYW-lGlFFqkKaQ3JMYIo5cVwiHuNag2XX747M_jxOn5QY_zRmZiawUhaxqDfuHnUvkYWU8JWcHs6YcWCVmjyi5sx6PrsiIXWo9wzOula_1y9KXirRwDmYL7KJeqKhmd6o_c9cyR48OKn39ny5jLL2ilyiMjdnJy5yYJiqcJ80nX9Zbi1PMZfkkORuXlHhQej03WdxoNHEif3YTkSRwo" />
+                    <span class="text-white font-bold font-headline-md text-lg">Vida Plena</span>
+                </div>
+                <p class="text-slate-400 font-body-md italic mb-4">"Alive with Faith, Community, and Purpose."</p>
+                <p class="text-slate-300">© 2024 Igreja Batista Vida Plena – Nilópolis. Todos os direitos reservados.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a class="text-slate-300 hover:text-white hover:underline underline-offset-4 transition-opacity opacity-90 hover:opacity-100"
+                    href="#">Privacidade</a>
+                <a class="text-slate-300 hover:text-white hover:underline underline-offset-4 transition-opacity opacity-90 hover:opacity-100"
+                    href="#">Contato</a>
+                <a class="text-pink-400 font-medium hover:underline underline-offset-4 transition-opacity opacity-90 hover:opacity-100"
+                    href="#">Doações</a>
+                <a class="text-slate-300 hover:text-white hover:underline underline-offset-4 transition-opacity opacity-90 hover:opacity-100"
+                    href="#">Localização</a>
+            </div>
+            <div class="flex justify-center md:justify-end gap-4">
+                <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-all"
+                    href="#">
+                    <img alt="Instagram" class="w-5 h-5"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1cwPEZQcSX7P-lauI7mNOKAsolbDdVR3iWXhkK8f_SlJNwq4dLqRMXB9NF9B1BJtPQGMwBXXW06_iFjv6YsNUqnabMalN1QqLo9UH5ixPa4E5a8zY1_bXD98Y5QSf7DupgSvyWixY798vSirHe3SydgIj9msWS8w2uX0oVBTN4CA7LrYDs80fQPWnBpYOeW8HB5ZAJdmvKSgRfgn052YLGfZ_fFcaT5EpRj53I3Hn3sz5K11GbO8FRrtqyyNgKdCOhhGUu3W-Mjc" />
+                </a>
+                <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-all"
+                    href="#">
+                    <img alt="YouTube" class="w-5 h-5"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL17IPppzZGasXvwGKyfWpI6gDi91y6K0RWmch27Ia3pxlEgEIq_9ByREAaqbL1s7XF4cgz14C_gRRFE5ctr46kwuRTi6bnJ6GKSfjIrA-Sjj0pfNFeHR9F_DZTNlw03zbSJHaIWYduxjyq_serDogEyF8bpFZxauU1FXM3AmS5ue0kVGjEujINVz3yz84ei2g-ANwbMJeoKOjHrx2ugDdRGjRQSwWo-dLRBpEEdfsZHDE89EMy23cJIznVx3baCqE73akGIceAaw" />
+                </a>
+                <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/20 transition-all"
+                    href="#">
+                    <img alt="Facebook" class="w-5 h-5"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_QLTqPuRmO_fPdMJoBcpIlUujBzmlJMVwYJ6p03ntnOobjYGtu-dtZxkBSAp8zAntHp5cgUcPeofX_2d2jPJB5ZuxlqBgZKxo5YhhwgzikzFf_fmREuY2bFa-IbXUqoiqDprIOrMxDSqmiufg8yoVRGPvQqUitpNp2NXybYg_FHyw6Bk5d142g0QLAUaek1ho4kP3wliQ6MPwvRSk_k946GsVKFxAkK7pmmcUCHZEmfez_8iG96AzUcczdtnAAAIq3qWUCuIs5Qk" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Simple scroll behavior for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white/90', 'py-2');
+                header.classList.remove('bg-white/60', 'h-20');
+                header.classList.add('h-16');
+            } else {
+                header.classList.remove('bg-white/90', 'py-2', 'h-16');
+                header.classList.add('bg-white/60', 'h-20');
+            }
+        });
+
+        // Real-time Search and Filter logic
+        const searchInput = document.getElementById('search-input');
+        const dayFilter = document.getElementById('day-filter');
+        const cards = document.querySelectorAll('.cell-card');
+
+        function filterCells() {
+            const searchTerm = searchInput.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+            const selectedDay = dayFilter.value;
+
+            cards.forEach(card => {
+                const cardText = card.textContent.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                const cardDay = card.getAttribute('data-day');
+
+                const matchesSearch = cardText.includes(searchTerm);
+                const matchesDay = !selectedDay || cardDay === selectedDay;
+
+                if (matchesSearch && matchesDay) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        if (searchInput && dayFilter) {
+            searchInput.addEventListener('input', filterCells);
+            dayFilter.addEventListener('change', filterCells);
+        }
+    </script>
+</body>
+
+</html>

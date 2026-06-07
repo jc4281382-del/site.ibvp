@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Informativos | Igreja Batista Vida Plena</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#7785e5",
+                        "surface-container-low": "#f2f3f6",
+                        "secondary-container": "#fe48bc",
+                        "on-secondary": "#ffffff",
+                        "primary": "#000741",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e7e8eb",
+                        "on-secondary-fixed": "#3c0029",
+                        "inverse-on-surface": "#f0f1f4",
+                        "tertiary-fixed-dim": "#8adc24",
+                        "on-tertiary-fixed-variant": "#2d5000",
+                        "outline-variant": "#c6c5d4",
+                        "outline": "#767683",
+                        "tertiary-fixed": "#a5f944",
+                        "secondary-fixed": "#ffd8e9",
+                        "surface-bright": "#f8f9fc",
+                        "surface-variant": "#e1e2e5",
+                        "on-tertiary-container": "#5d9c00",
+                        "primary-fixed": "#dfe0ff",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#152a00",
+                        "on-primary-fixed-variant": "#2e3d99",
+                        "tertiary": "#071300",
+                        "error-container": "#ffdad6",
+                        "secondary": "#b40081",
+                        "surface-container-highest": "#e1e2e5",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#0f2000",
+                        "inverse-primary": "#bbc3ff",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#bbc3ff",
+                        "on-surface-variant": "#454652",
+                        "inverse-surface": "#2e3133",
+                        "surface-container": "#edeef1",
+                        "background": "#f8f9fc",
+                        "on-surface": "#191c1e",
+                        "surface": "#f8f9fc",
+                        "secondary-fixed-dim": "#ffafd7",
+                        "primary-container": "#001478",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1e",
+                        "on-secondary-container": "#5a003e",
+                        "on-primary-fixed": "#000e5f",
+                        "on-secondary-fixed-variant": "#8a0061",
+                        "surface-tint": "#4856b3",
+                        "surface-dim": "#d9dadd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "section-gap": "80px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "label-bold": ["Be Vietnam Pro"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+        }
+
+        .radiant-bg {
+            background: radial-gradient(circle at 20% 30%, rgba(180, 220, 240, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 216, 233, 0.3) 0%, transparent 50%);
+        }
+
+        .card-glow:hover {
+            box-shadow: 0 20px 40px -15px rgba(0, 20, 120, 0.1), 0 0 20px 2px rgba(255, 216, 233, 0.4);
+            transform: translateY(-4px);
+        }
+
+        .card-expanded-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, margin 0.4s ease;
+        }
+        
+        .card-expanded-content.active {
+            max-height: 1000px;
+            opacity: 1;
+            margin-top: 1rem;
+        }
+        
+        .expand-arrow {
+            transition: transform 0.3s ease;
+        }
+        
+        .expand-arrow.active {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+    <!-- Top Navigation Bar -->
+    <header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-md shadow-sm border-b border-white/20 transition-all duration-300 font-['Plus_Jakarta_Sans'] antialiased">
+        <div class="max-w-[1200px] mx-auto flex justify-between items-center px-4 md:px-8 h-20">
+            <div class="flex items-center gap-3">
+                <img alt="Logo Igreja Batista Vida Plena" class="w-10 h-10 rounded-full object-contain" src="logo.png" />
+                <span class="font-bold text-lg sm:text-xl tracking-tight text-primary">Igreja Batista Vida Plena</span>
+            </div>
+            <div class="hidden lg:flex items-center gap-8">
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="ibvp.html">Início</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="informativos.html">Informativos</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="estudos.html">Estudos Bíblicos</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="missoes.html">Missões</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="ministerios.html">Ministérios</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="sobrenos.html">Sobre Nós</a>
+            </div>
+            <a href="https://www.youtube.com/live/Hw3CnwEE_70?si=5q4g02qYWn1anIHM" target="_blank" rel="noopener noreferrer"
+                class="hidden lg:flex bg-primary-container text-white px-6 py-2.5 rounded-full font-bold hover:scale-105 transition-transform shadow-lg items-center justify-center text-sm">
+                Assista ao vivo
+            </a>
+            <button class="lg:hidden text-primary p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg pb-4">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="ibvp.html">Início</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="informativos.html">Informativos</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="estudos.html">Estudos Bíblicos</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="missoes.html">Missões</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="ministerios.html">Ministérios</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="sobrenos.html">Sobre Nós</a>
+                <a href="https://www.youtube.com/live/Hw3CnwEE_70?si=5q4g02qYWn1anIHM" target="_blank" rel="noopener noreferrer"
+                    class="bg-primary-container text-white px-6 py-3 rounded-full font-bold text-center mt-4">
+                    Assista ao vivo
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-section-gap overflow-hidden radiant-bg">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center relative z-10">
+                <h1 class="font-headline-xl text-headline-xl text-primary mb-6 animate-fade-in-up">Informativos &amp;
+                    Palavra</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Fique por dentro de tudo
+                    o que acontece em nossa comunidade e alimente sua fé com nossas mensagens.</p>
+                <div class="absolute -top-20 -left-20 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-tertiary-fixed/10 rounded-full blur-3xl"></div>
+            </div>
+        </section>
+
+        <!-- News Grid -->
+        <section class="py-section-gap">
+            <div
+                class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                <!-- Card 1 -->
+                <article
+                    class="bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-sm card-glow transition-all duration-300 flex flex-col group cursor-pointer"
+                    onclick="toggleCard(this)">
+                    <div class="relative h-60 overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            alt="Imersão Jesus Desperta 2.0"
+                            src="imersao_desperta.png" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="font-label-bold text-label-bold text-outline-variant mb-2">Ago 2026</span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">Imersão Desperta 2.0: 21 à 23 de Agosto</h3>
+                        
+                        <!-- Conteúdo Expandido -->
+                        <div class="card-expanded-content text-on-surface-variant text-body-md">
+                            <p class="mb-4">Não é só mais um evento. É um encontro marcado com o que Deus quer fazer em você, e em toda a nossa igreja.</p>
+                            <p class="mb-4">Imersão Desperta 2.0 chega nos dias 21, 22 e 23 de agosto, trazendo três dias de imersão, adoração e palavra para despertar o que estava adormecido e acender o que ainda não foi aceso.</p>
+                            <p class="mb-4 font-semibold">Você foi chamado para isso.</p>
+                            <p class="mb-2">📍 Inscrições com a Pastora Luzia ou o Pastor Vitor</p>
+                            <p class="mb-4 font-semibold text-primary">💰 Individual: R$ 250 | Casal: R$ 400 | Filhos (13+): R$ 150 | Crianças (6–12 anos): R$ 100</p>
+                            <p class="mb-4 font-semibold">Não fique de fora. Esse é o momento da sua família.</p>
+                            <div class="mt-4 pt-2">
+                                <a href="https://wa.me/5521985453071?text=Ol%C3%A1%21%20Gostaria%20de%20me%20inscrever%20na%20Imers%C3%A3o%20Desperta%202.0." 
+                                   target="_blank" 
+                                   class="w-full text-center block bg-secondary hover:bg-secondary/90 text-on-secondary px-6 py-2.5 rounded-full font-bold hover:scale-105 transition-transform active:scale-95 shadow-md text-sm">
+                                    Inscrever-se
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto pt-4 flex items-center justify-between border-t border-gray-100">
+                            <span class="inline-flex items-center gap-2 text-secondary font-label-bold text-label-bold">
+                                <span class="read-more-text">Leia mais</span>
+                                <span class="material-symbols-outlined expand-arrow">keyboard_arrow_right</span>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 2 -->
+                <article
+                    class="bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-sm card-glow transition-all duration-300 flex flex-col group cursor-pointer"
+                    onclick="toggleCard(this)">
+                    <div class="relative h-60 overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            alt="Festa na Roça"
+                            src="festa_roca.png" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="font-label-bold text-label-bold text-outline-variant mb-2">Jul 2026</span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">Festa da Roça: No dia 25 de Julho estaremos na praça Santos Dummont</h3>
+                        
+                        <!-- Conteúdo Expandido -->
+                        <div class="card-expanded-content text-on-surface-variant text-body-md">
+                            <p class="mb-4">Vai ter festa, e a festa é na roça! 🌽</p>
+                            <p class="mb-4">Chama a família, chama os vizinhos e vem comemorar com a gente uma tarde cheia de sabor, alegria e muita animação.</p>
+                            <p class="mb-4"><strong>Festa na Roça</strong> acontece no dia <strong>25 de julho, sábado, a partir das 18h</strong>, na Praça Santos Dumont — Estrada Marechal Castelo Branco, 907.</p>
+                            <p class="mb-4">No cardápio: caldos quentinhos, pastéis crocantes, aipim, canjica e muito mais pra aquecer o coração 🍲</p>
+                            <p class="mb-4">E pra criançada — e pros adultos que não cresceram — teremos brincadeiras e atividades pra todo mundo se divertir do início ao fim!</p>
+                            <p class="mb-4 font-semibold text-primary">Vem viver esse moment com a gente. A roça tá esperando por você!</p>
+                        </div>
+
+                        <div class="mt-auto pt-4 flex items-center justify-between border-t border-gray-100">
+                            <span class="inline-flex items-center gap-2 text-secondary font-label-bold text-label-bold">
+                                <span class="read-more-text">Leia mais</span>
+                                <span class="material-symbols-outlined expand-arrow">keyboard_arrow_right</span>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 3 -->
+                <article
+                    class="bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-sm card-glow transition-all duration-300 flex flex-col group cursor-pointer"
+                    onclick="toggleCard(this)">
+                    <div class="relative h-60 overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            alt="Jantar dos Casais"
+                            src="jantar_casais.png" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="font-label-bold text-label-bold text-outline-variant mb-2">Jun 2026</span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">Jantar dos Casais: Dia 12 de junho às 19:30</h3>
+                        
+                        <!-- Conteúdo Expandido -->
+                        <div class="card-expanded-content text-on-surface-variant text-body-md">
+                            <p class="mb-4">Uma noite especial preparada para fortalecer relacionamentos, celebrar o amor e proporcionar momentos inesquecíveis de comunhão e alegria!</p>
+                            <p class="mb-1">📅 <strong>Data:</strong> 12 de junho</p>
+                            <p class="mb-1">🕢 <strong>Horário:</strong> 19h30</p>
+                            <p class="mb-4">📍 <strong>Realização:</strong> Igreja Batista Vida Plena</p>
+                            <p class="mb-4 font-semibold text-primary">💰 Valor: R$ 100,00 por casal</p>
+                            <p class="mb-4 font-semibold">✨ Um ambiente acolhedor, programação especial e um tempo precioso para os casais desfrutarem juntos.</p>
+                            <p class="mb-4 font-semibold">📞 Garanta sua participação e venha viver essa experiência conosco!</p>
+                        </div>
+
+                        <div class="mt-auto pt-4 flex items-center justify-between border-t border-gray-100">
+                            <span class="inline-flex items-center gap-2 text-secondary font-label-bold text-label-bold">
+                                <span class="read-more-text">Leia mais</span>
+                                <span class="material-symbols-outlined expand-arrow">keyboard_arrow_right</span>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 4 -->
+                <article
+                    class="bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-sm card-glow transition-all duration-300 flex flex-col group cursor-pointer"
+                    onclick="toggleCard(this)">
+                    <div class="relative h-60 overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            alt="Desenvolvendo Maturidade Espiritual e Emocional"
+                            src="maturidade_emocional.png" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="font-label-bold text-label-bold text-outline-variant mb-2">14/06/2026</span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">Desenvolvendo Maturidade Espiritual e Emocional</h3>
+                        
+                        <!-- Conteúdo Expandido -->
+                        <div class="card-expanded-content text-on-surface-variant text-body-md">
+                            <p class="mb-4 font-semibold text-primary">Desenvolvimento Maturidade Espiritual e emocional</p>
+                            <p class="mb-2">📅 14 de junho às 8:30</p>
+                            <p class="mb-4">📍 Estrada Marechal Castelo Branco, 907 Nilópolis</p>
+                        </div>
+
+                        <div class="mt-auto pt-4 flex items-center justify-between border-t border-gray-100">
+                            <span class="inline-flex items-center gap-2 text-secondary font-label-bold text-label-bold">
+                                <span class="read-more-text">Leia mais</span>
+                                <span class="material-symbols-outlined expand-arrow">keyboard_arrow_right</span>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 5 -->
+                <article
+                    class="bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-sm card-glow transition-all duration-300 flex flex-col group cursor-pointer"
+                    onclick="toggleCard(this)">
+                    <div class="relative h-60 overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            alt="Projeto Casa na Rocha"
+                            src="casa_rocha.png" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">Projeto Casa na Rocha</h3>
+                        
+                        <!-- Conteúdo Expandido -->
+                        <div class="card-expanded-content text-on-surface-variant text-body-md">
+                            <p class="mb-4">Projeto Casa na Rocha: enraizando os fundamentos de fé na vida dos seus filhos.</p>
+                            <p class="mb-4">Participe da nossa aula especial e descubra como guiar a próxima geração nos caminhos do Senhor de forma sólida e prática.</p>
+                            <p class="mb-1">📅 <strong>Data:</strong> 31 de maio</p>
+                            <p class="mb-1">🕢 <strong>Horário:</strong> 08h30</p>
+                            <p class="mb-4">📍 <strong>Local:</strong> Igreja Batista Vida Plena (Estrada Marechal Castelo Branco, 907)</p>
+                        </div>
+
+                        <div class="mt-auto pt-4 flex items-center justify-between border-t border-gray-100">
+                            <span class="inline-flex items-center gap-2 text-secondary font-label-bold text-label-bold">
+                                <span class="read-more-text">Leia mais</span>
+                                <span class="material-symbols-outlined expand-arrow">keyboard_arrow_right</span>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+        <!-- Newsletter / WhatsApp CTA -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-section-gap">
+            <div
+                class="bg-primary rounded-[32px] p-8 md:p-16 text-center text-on-primary relative overflow-hidden shadow-xl">
+                <div
+                    class="absolute inset-0 bg-[linear-gradient(45deg,rgba(0,20,120,1)0%,rgba(220,40,160,0.2)100%)] opacity-50">
+                </div>
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <span class="material-symbols-outlined text-6xl mb-6 text-secondary-fixed">chat</span>
+                    <h2 class="font-headline-xl text-headline-xl mb-6">Receba nossas novidades no WhatsApp</h2>
+                    <p class="font-body-lg text-body-lg mb-10 text-primary-fixed/80">Faça parte do nosso grupo oficial e
+                        receba em primeira mão reflexões diárias, avisos de cultos e eventos da nossa comunidade.</p>
+                    <a href="https://wa.me/5521969513547" target="_blank"
+                        class="bg-secondary text-on-secondary px-10 py-4 rounded-full font-headline-md text-headline-md hover:scale-105 transition-transform active:scale-95 shadow-lg inline-flex items-center gap-3 mx-auto">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+                        Pedir para entrar
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-primary text-on-primary w-full py-section-gap px-margin-mobile flex flex-col items-center text-center">
+        <div class="max-w-container-max w-full flex flex-col items-center">
+            <div class="font-headline-md text-headline-md text-on-primary mb-8 font-bold">Igreja Batista Vida Plena
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 mb-12">
+                <a class="text-outline-variant hover:text-secondary-container transition-colors font-label-bold text-label-bold"
+                    href="#">Termos de Uso</a>
+                <a class="text-outline-variant hover:text-secondary-container transition-colors font-label-bold text-label-bold"
+                    href="#">Privacidade</a>
+                <a class="text-outline-variant hover:text-secondary-container transition-colors font-label-bold text-label-bold"
+                    href="#">Contato</a>
+                <a class="text-outline-variant hover:text-secondary-container transition-colors font-label-bold text-label-bold"
+                    href="#">Localização</a>
+            </div>
+            <div class="w-full h-px bg-on-primary/10 mb-12"></div>
+            <p class="font-body-md text-body-md text-primary-fixed/60 max-w-xl">
+                © 2024 Igreja Batista Vida Plena – Nilópolis. Viva com Fé, Comunidade e Propósito.
+            </p>
+        </div>
+    </footer>
+    <script>
+        // Micro-interactions for buttons
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('mousedown', () => el.classList.add('scale-95'));
+            el.addEventListener('mouseup', () => el.classList.remove('scale-95'));
+            el.addEventListener('mouseleave', () => el.classList.remove('scale-95'));
+        });
+
+        // Toggle Expand/Collapse Cards
+        function toggleCard(cardElement) {
+            const content = cardElement.querySelector('.card-expanded-content');
+            const arrow = cardElement.querySelector('.expand-arrow');
+            const readMoreText = cardElement.querySelector('.read-more-text');
+            
+            if (content) {
+                const isActive = content.classList.contains('active');
+                if (isActive) {
+                    content.classList.remove('active');
+                    if (arrow) arrow.classList.remove('active');
+                    if (readMoreText) readMoreText.textContent = 'Leia mais';
+                } else {
+                    content.classList.add('active');
+                    if (arrow) arrow.classList.add('active');
+                    if (readMoreText) readMoreText.textContent = 'Leia menos';
+                }
+            }
+        }
+        
+        // Prevent clicks inside card links/buttons from triggering the card toggle
+        document.querySelectorAll('article a, article button').forEach(el => {
+            el.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        });
+    </script>
+</body>
+
+</html>
