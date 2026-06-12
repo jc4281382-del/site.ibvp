@@ -136,38 +136,55 @@
 <body
     class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
     <!-- TopNavBar -->
-    <header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-md shadow-sm border-b border-white/20 transition-all duration-300 font-['Plus_Jakarta_Sans'] antialiased">
+    <header
+        class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-md shadow-sm border-b border-white/20 transition-all duration-300 font-['Plus_Jakarta_Sans'] antialiased">
         <div class="max-w-[1200px] mx-auto flex justify-between items-center px-4 md:px-8 h-20">
             <div class="flex items-center gap-3">
-                <img alt="Logo Igreja Batista Vida Plena" class="w-10 h-10 rounded-full object-contain" src="logo.png" />
+                <img alt="Logo Igreja Batista Vida Plena" class="w-10 h-10 rounded-full object-contain"
+                    src="logo.png" />
                 <span class="font-bold text-lg sm:text-xl tracking-tight text-primary">Igreja Batista Vida Plena</span>
             </div>
             <div class="hidden lg:flex items-center gap-8">
-                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="index.html">Início</a>
-                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="informativos.html">Informativos</a>
-                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="estudos.html">Estudos Bíblicos</a>
-                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="missoes.html">Missões</a>
-                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="ministerios.html">Ministérios</a>
-                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="sobrenos.html">Sobre Nós</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors"
+                    href="index.html">Início</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors"
+                    href="informativos.html">Informativos</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors"
+                    href="estudos.html">Estudos Bíblicos</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors"
+                    href="missoes.html">Missões</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors"
+                    href="ministerios.html">Ministérios</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors"
+                    href="sobrenos.html">Sobre Nós</a>
             </div>
-            <a href="https://www.youtube.com/live/Hw3CnwEE_70?si=5q4g02qYWn1anIHM" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.youtube.com/live/Hw3CnwEE_70?si=5q4g02qYWn1anIHM" target="_blank"
+                rel="noopener noreferrer"
                 class="hidden lg:flex bg-primary-container text-white px-6 py-2.5 rounded-full font-bold hover:scale-105 transition-transform shadow-lg items-center justify-center text-sm">
                 Assista ao vivo
             </a>
-            <button class="lg:hidden text-primary p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <button class="lg:hidden text-primary p-2"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg pb-4">
             <div class="flex flex-col px-6 py-4 space-y-4">
-                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="index.html">Início</a>
-                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="informativos.html">Informativos</a>
-                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="estudos.html">Estudos Bíblicos</a>
-                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="missoes.html">Missões</a>
-                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="ministerios.html">Ministérios</a>
-                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors" href="sobrenos.html">Sobre Nós</a>
-                <a href="https://www.youtube.com/live/Hw3CnwEE_70?si=5q4g02qYWn1anIHM" target="_blank" rel="noopener noreferrer"
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors"
+                    href="index.html">Início</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors"
+                    href="informativos.html">Informativos</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors"
+                    href="estudos.html">Estudos Bíblicos</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors"
+                    href="missoes.html">Missões</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors"
+                    href="ministerios.html">Ministérios</a>
+                <a class="text-on-surface-variant font-semibold hover:text-secondary transition-colors"
+                    href="sobrenos.html">Sobre Nós</a>
+                <a href="https://www.youtube.com/live/Hw3CnwEE_70?si=5q4g02qYWn1anIHM" target="_blank"
+                    rel="noopener noreferrer"
                     class="bg-primary-container text-white px-6 py-3 rounded-full font-bold text-center mt-4">
                     Assista ao vivo
                 </a>
@@ -177,8 +194,11 @@
     <main class="pt-20">
         <!-- Hero Section -->
         <section class="relative min-h-[90vh] flex items-center overflow-hidden">
-            <!-- Hero Section background (imagem removida temporariamente) -->
-            <div class="absolute inset-0 z-0 bg-gradient-to-br from-surface-container-low to-background"></div>
+            <!-- Hero Section background -->
+            <div class="absolute inset-0 z-0">
+                <img alt="Corrente se quebrando - liberdade e restauração" class="w-full h-full object-cover object-center" src="hero_corrente.png" />
+                <div class="absolute inset-0 bg-gradient-to-r from-background via-background/75 to-background/20"></div>
+            </div>
             <div class="container-max mx-auto px-margin-mobile md:px-gutter relative z-10 grid md:grid-cols-2 gap-unit">
                 <div class="max-w-xl space-y-6">
                     <div
@@ -189,7 +209,9 @@
                         Restauração Completa para uma <span class="text-secondary">Vida Nova</span>
                     </h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-                        Inaugurado há 4 anos, o Centro Terapêutico Recomeço, localizado em Itaoca, na cidade de São Gonçalo – RJ, é fruto de uma parceria da Igreja Batista Vida Plena em Nilópolis com a Igreja Shekinah de Bomsucesso.
+                        Inaugurado há 4 anos, o Centro Terapêutico Recomeço, localizado em Itaoca, na cidade de São
+                        Gonçalo – RJ, é fruto de uma parceria da Igreja Batista Vida Plena em Nilópolis com a Igreja
+                        Shekinah de Bonsucesso.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 pt-4">
                         <a href="https://wa.me/5521969686378" target="_blank" rel="noopener noreferrer"
@@ -260,16 +282,20 @@
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
                 <div class="grid md:grid-cols-2 gap-16 items-center">
                     <div class="relative group">
-                        <div class="relative rounded-[24px] overflow-hidden border-2 border-dashed border-primary/20 bg-surface-container/50 h-[500px] flex flex-col items-center justify-center text-on-surface-variant">
+                        <div
+                            class="relative rounded-[24px] overflow-hidden border-2 border-dashed border-primary/20 bg-surface-container/50 h-[500px] flex flex-col items-center justify-center text-on-surface-variant">
                             <span class="material-symbols-outlined text-5xl opacity-40 mb-2">image</span>
-                            <span class="text-sm font-semibold opacity-40">Espaço Reservado para Foto da Estrutura</span>
+                            <span class="text-sm font-semibold opacity-40">Espaço Reservado para Foto da
+                                Estrutura</span>
                         </div>
                     </div>
                     <div class="space-y-8">
                         <div>
                             <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Compromisso Social
                             </h2>
-                            <p class="font-body-lg text-body-lg text-on-surface-variant">Com o objetivo de alcançar vidas marcadas pela dependência química, oferecemos acolhimento, cuidado espiritual e acompanhamento terapêutico, além de apoio às famílias que enfrentam essa realidade.</p>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant">Com o objetivo de alcançar
+                                vidas marcadas pela dependência química, oferecemos acolhimento, cuidado espiritual e
+                                acompanhamento terapêutico, além de apoio às famílias que enfrentam essa realidade.</p>
                         </div>
                         <ul class="space-y-4">
                             <li class="flex items-start gap-4">
