@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vida Plena Restauração | Centro Terapêutico</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Be+Vietnam+Pro:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e7e8eb",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#4856b3",
+                        "secondary-fixed-dim": "#ffafd7",
+                        "surface": "#f8f9fc",
+                        "on-tertiary-fixed-variant": "#2d5000",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#5a003e",
+                        "inverse-surface": "#2e3133",
+                        "on-tertiary-container": "#5d9c00",
+                        "surface-container-highest": "#e1e2e5",
+                        "on-primary-fixed": "#000e5f",
+                        "surface-container": "#edeef1",
+                        "surface-container-low": "#f2f3f6",
+                        "inverse-primary": "#bbc3ff",
+                        "tertiary-fixed": "#a5f944",
+                        "surface-bright": "#f8f9fc",
+                        "on-tertiary-fixed": "#0f2000",
+                        "primary-container": "#001478",
+                        "on-primary-container": "#7785e5",
+                        "outline": "#767683",
+                        "tertiary": "#071300",
+                        "secondary": "#b40081",
+                        "on-surface": "#191c1e",
+                        "on-secondary-fixed": "#3c0029",
+                        "surface-variant": "#e1e2e5",
+                        "secondary-container": "#fe48bc",
+                        "surface-dim": "#d9dadd",
+                        "background": "#f8f9fc",
+                        "on-surface-variant": "#454652",
+                        "on-primary-fixed-variant": "#2e3d99",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#152a00",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dfe0ff",
+                        "secondary-fixed": "#ffd8e9",
+                        "primary-fixed-dim": "#bbc3ff",
+                        "on-secondary-fixed-variant": "#8a0061",
+                        "on-background": "#191c1e",
+                        "tertiary-fixed-dim": "#8adc24",
+                        "primary": "#000741",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f0f1f4",
+                        "outline-variant": "#c6c5d4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "container-max": "1200px",
+                        "section-gap": "80px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "label-bold": ["Be Vietnam Pro"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            background: rgba(248, 249, 252, 0.6);
+            backdrop-filter: blur(12px);
+        }
+
+        .radiant-accent {
+            background: linear-gradient(135deg, #B4DCF0 0%, transparent 100%);
+            opacity: 0.3;
+        }
+
+        .warm-glow {
+            box-shadow: 0 10px 40px -10px rgba(0, 20, 120, 0.1), 0 0 20px rgba(220, 40, 160, 0.05);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 20px 40px -12px rgba(0, 20, 120, 0.15);
+        }
+
+        .btn-hover:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+    <!-- Top Navigation -->
+    <header class="fixed top-0 w-full z-50 glass-nav shadow-sm h-20 transition-all duration-300">
+        <nav class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-full">
+            <div class="flex items-center gap-2 group cursor-pointer">
+                <img alt="Logo Vida Plena" class="h-10 w-10 object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNAGBZUzT_hdAhRk9KwaZwg1FBX1xqxKmBd_Xnmct9CjMmPNcLyukxClmV_Q-gscBCfoJjN_qTlxu_4LZ4dXLxGdFy5VhQc04QxQ51I1nfoRNSsq5rF57hJW_G3fBS-DnfeMvsym-fQsCocN2z_NBgJy0SDqaTZGJPUlkcV4L_RmOSBrYSnqWclxU7pqYtj134mti_kHo7mezjIJB8qJItyETfzrqyJccVhKAYw6_NraviVkLwFL6RyeXvK6DZQDiphKSupJIT9hA" />
+                <span class="font-headline-md text-headline-md font-bold text-primary">Vida Plena Restauração</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-label-bold text-label-bold text-secondary border-b-2 border-secondary pb-1"
+                    href="#">Início</a>
+                <a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors"
+                    href="#essence">Sobre</a>
+                <a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors"
+                    href="#help">Tratamento</a>
+                <a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors"
+                    href="#environment">Estrutura</a>
+                <a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Depoimentos</a>
+                <button
+                    class="bg-primary-container text-on-primary font-label-bold text-label-bold px-6 py-3 rounded-full hover:bg-primary transition-all shadow-md active:scale-95">Pedir
+                    Ajuda</button>
+            </div>
+            <button class="md:hidden text-primary">
+                <span class="material-symbols-outlined text-4xl">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Hero Background" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2P6fmXXZpOGy4z7-k_-0_1NaaQ5WsDx0pZmyZFQJMsgEzxux5EIIoaqhHZ-5HY_9wmOuOwmsZdr_QN_0ddC5Dabh5sNpTvhZTNUGbtWckfvLSLxIQPe2XXZESHb4Z0GvqXdS2Ke1SKSYjXLlWSYEb0tqBhnzYigjcfUS0g4sZZ3k2baefP8EVO-h4xor9joAYqC2K1fk8Zx3Wgjviv7JoiV9Mg-r-gkeTDDJKfktkzxOUkdbw4Y91JPbFXDHBIJWEn--odD752q0" />
+                <div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+            </div>
+            <div class="container-max mx-auto px-margin-mobile md:px-gutter relative z-10 grid md:grid-cols-2 gap-unit">
+                <div class="max-w-xl space-y-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-container/20 text-on-secondary-fixed-variant font-label-bold text-label-bold border border-secondary-container/30">
+                        <span class="material-symbols-outlined text-lg"
+                            style="font-variation-settings: 'FILL' 1;">dining</span>
+                        Um novo começo é possível
+                    </div>
+                    <h1 class="font-headline-xl text-headline-xl text-primary leading-tight">
+                        Restauração Completa para uma <span class="text-secondary">Vida Nova</span>
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Um refúgio de cuidado, fé e transformação para quem busca superar a dependência e reencontrar o
+                        seu propósito. Acolhimento profissional com amor cristão.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <button
+                            class="bg-primary-container text-on-primary font-label-bold text-label-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all btn-hover">Pedir
+                            Ajuda Agora</button>
+                        <button
+                            class="bg-surface border-2 border-primary text-primary font-label-bold text-label-bold px-8 py-4 rounded-full hover:bg-primary-fixed transition-all btn-hover">Conhecer
+                            o Centro</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Essence Section -->
+        <section class="py-section-gap relative" id="essence">
+            <div class="radiant-accent absolute top-0 right-0 w-1/3 h-full pointer-events-none"></div>
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+                <div class="text-center mb-16 space-y-4">
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Nossa Essência</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Nossa abordagem
+                        holística integra ciência e espiritualidade para garantir uma recuperação duradoura e
+                        significativa.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Body -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-[24px] warm-glow card-hover transition-all duration-300 border border-surface-variant/50">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center mb-6 shadow-sm">
+                            <span class="material-symbols-outlined text-tertiary text-3xl"
+                                style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-3">Corpo</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Protocolos de desintoxicação
+                            acompanhados, nutrição balanceada e atividades físicas para restaurar a vitalidade física do
+                            paciente.</p>
+                    </div>
+                    <!-- Mind -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-[24px] warm-glow card-hover transition-all duration-300 border border-surface-variant/50">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center mb-6 shadow-sm">
+                            <span class="material-symbols-outlined text-secondary text-3xl"
+                                style="font-variation-settings: 'FILL' 1;">psychology</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-3">Mente</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Terapia cognitivo-comportamental,
+                            acompanhamento psiquiátrico e dinâmicas em grupo para fortalecer o equilíbrio emocional e
+                            psicológico.</p>
+                    </div>
+                    <!-- Spirit -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-[24px] warm-glow card-hover transition-all duration-300 border border-surface-variant/50">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center mb-6 shadow-sm">
+                            <span class="material-symbols-outlined text-primary text-3xl"
+                                style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-3">Espírito</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Direcionamento espiritual, momentos
+                            de oração e estudos bíblicos, fundamentando a cura na fé e no amor incondicional de Deus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- The Environment -->
+        <section class="py-section-gap bg-surface-container-low overflow-hidden" id="environment">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-4 bg-secondary/10 rounded-[32px] blur-2xl group-hover:bg-secondary/20 transition-all duration-500">
+                        </div>
+                        <div class="relative rounded-[24px] overflow-hidden shadow-2xl">
+                            <img alt="Estrutura Vida Plena"
+                                class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2P6fmXXZpOGy4z7-k_-0_1NaaQ5WsDx0pZmyZFQJMsgEzxux5EIIoaqhHZ-5HY_9wmOuOwmsZdr_QN_0ddC5Dabh5sNpTvhZTNUGbtWckfvLSLxIQPe2XXZESHb4Z0GvqXdS2Ke1SKSYjXLlWSYEb0tqBhnzYigjcfUS0g4sZZ3k2baefP8EVO-h4xor9joAYqC2K1fk8Zx3Wgjviv7JoiV9Mg-r-gkeTDDJKfktkzxOUkdbw4Y91JPbFXDHBIJWEn--odD752q0" />
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Estrutura de Paz e Segurança
+                            </h2>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant">O Centro Terapêutico Vida Plena
+                                oferece um ambiente planejado para o repouso da alma e o foco total na recuperação. Cada
+                                detalhe, desde a arquitetura minimalista até as áreas verdes, foi pensado para promover
+                                a serenidade.</p>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+                                <div>
+                                    <p class="font-label-bold text-label-bold text-primary">Acomodações Modernas</p>
+                                    <p class="text-on-surface-variant">Suítes climatizadas e mobiliário ergonômico para
+                                        máximo conforto.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+                                <div>
+                                    <p class="font-label-bold text-label-bold text-primary">Segurança 24 horas</p>
+                                    <p class="text-on-surface-variant">Monitoramento constante e equipe de apoio sempre
+                                        presente.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+                                <div>
+                                    <p class="font-label-bold text-label-bold text-primary">Áreas de Convivência</p>
+                                    <p class="text-on-surface-variant">Espaços amplos para socialização, lazer e
+                                        meditação.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How We Help - Therapeutic Journey -->
+        <section class="py-section-gap" id="help">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+                <div class="text-center mb-16">
+                    <h2 class="font-headline-lg text-headline-lg text-primary">A Jornada da Transformação</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mt-4">Um processo estruturado em etapas
+                        claras para o sucesso total do paciente.</p>
+                </div>
+                <div class="relative">
+                    <!-- Journey Line (Desktop Only) -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-surface-variant -translate-y-1/2">
+                    </div>
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <!-- Step 1 -->
+                        <div class="relative bg-background p-6 text-center z-10 group">
+                            <div
+                                class="w-16 h-16 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center text-on-primary font-headline-md shadow-lg group-hover:scale-110 transition-transform">
+                                1</div>
+                            <h4 class="font-label-bold text-label-bold text-primary mb-2">Acolhimento</h4>
+                            <p class="text-body-md text-on-surface-variant">Triagem profissional e acolhida humanizada
+                                da família e paciente.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="relative bg-background p-6 text-center z-10 group">
+                            <div
+                                class="w-16 h-16 rounded-full bg-secondary mx-auto mb-6 flex items-center justify-center text-on-secondary font-headline-md shadow-lg group-hover:scale-110 transition-transform">
+                                2</div>
+                            <h4 class="font-label-bold text-label-bold text-primary mb-2">Desintoxicação</h4>
+                            <p class="text-body-md text-on-surface-variant">Acompanhamento médico rigoroso para o
+                                bem-estar físico inicial.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="relative bg-background p-6 text-center z-10 group">
+                            <div
+                                class="w-16 h-16 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center text-on-primary font-headline-md shadow-lg group-hover:scale-110 transition-transform">
+                                3</div>
+                            <h4 class="font-label-bold text-label-bold text-primary mb-2">Conscientização</h4>
+                            <p class="text-body-md text-on-surface-variant">Terapias e grupos focados em entender e
+                                vencer as raízes do vício.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="relative bg-background p-6 text-center z-10 group">
+                            <div
+                                class="w-16 h-16 rounded-full bg-secondary mx-auto mb-6 flex items-center justify-center text-on-secondary font-headline-md shadow-lg group-hover:scale-110 transition-transform">
+                                4</div>
+                            <h4 class="font-label-bold text-label-bold text-primary mb-2">Reintegração</h4>
+                            <p class="text-body-md text-on-surface-variant">Preparação social e familiar para o retorno
+                                consciente à sociedade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Partnership/Trust -->
+        <section class="py-section-gap bg-primary-container text-on-primary overflow-hidden relative">
+            <div class="absolute inset-0 opacity-10">
+                <div
+                    class="absolute top-0 left-0 w-64 h-64 bg-secondary rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2">
+                </div>
+                <div
+                    class="absolute bottom-0 right-0 w-96 h-96 bg-primary rounded-full blur-3xl translate-x-1/3 translate-y-1/3">
+                </div>
+            </div>
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <img alt="IB Vida Plena"
+                            class="w-48 h-48 object-contain filter brightness-0 invert opacity-90 drop-shadow-lg"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNAGBZUzT_hdAhRk9KwaZwg1FBX1xqxKmBd_Xnmct9CjMmPNcLyukxClmV_Q-gscBCfoJjN_qTlxu_4LZ4dXLxGdFy5VhQc04QxQ51I1nfoRNSsq5rF57hJW_G3fBS-DnfeMvsym-fQsCocN2z_NBgJy0SDqaTZGJPUlkcV4L_RmOSBrYSnqWclxU7pqYtj134mti_kHo7mezjIJB8qJItyETfzrqyJccVhKAYw6_NraviVkLwFL6RyeXvK6DZQDiphKSupJIT9hA" />
+                    </div>
+                    <div class="w-full md:w-2/3 text-center md:text-left space-y-6">
+                        <h2 class="font-headline-lg text-headline-lg">Um Ministério com Propósito</h2>
+                        <p class="font-body-lg text-body-lg text-on-primary-container">
+                            O Centro Terapêutico Vida Plena é uma iniciativa da <strong>Igreja Batista Vida
+                                Plena</strong> em Nilópolis. Unimos a excelência clínica de uma equipe multidisciplinar
+                            (médicos, psicólogos e terapeutas) ao poder transformador da mensagem do Evangelho. Nossa
+                            credibilidade é construída sobre anos de serviço à comunidade e centenas de vidas
+                            restauradas.
+                        </p>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                            <span class="px-4 py-2 bg-white/10 rounded-lg text-label-bold border border-white/20">Equipe
+                                Multidisciplinar</span>
+                            <span
+                                class="px-4 py-2 bg-white/10 rounded-lg text-label-bold border border-white/20">Suporte
+                                Pastoral</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-lg text-label-bold border border-white/20">Apoio
+                                à Família</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA -->
+        <section class="py-24 text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-secondary/5 -z-10"></div>
+            <div class="max-w-3xl mx-auto px-margin-mobile px-gutter">
+                <h2 class="font-headline-xl text-headline-xl text-primary mb-6">Você não está sozinho</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                    A ajuda que você precisa está a apenas um clique de distância. Nossa equipe está pronta para te
+                    acolher agora mesmo, com total sigilo e respeito.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button
+                        class="bg-secondary text-on-secondary font-label-bold text-label-bold px-10 py-5 rounded-full shadow-lg hover:bg-secondary-container transition-all flex items-center justify-center gap-2 btn-hover">
+                        <span class="material-symbols-outlined">chat</span>
+                        Conversar via WhatsApp
+                    </button>
+                    <button
+                        class="bg-primary text-on-primary font-label-bold text-label-bold px-10 py-5 rounded-full shadow-lg hover:bg-primary-container transition-all flex items-center justify-center gap-2 btn-hover">
+                        <span class="material-symbols-outlined">call</span>
+                        Ligar Agora
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full rounded-t-xl bg-surface-container-highest dark:bg-surface-container-low mt-section-gap">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center py-section-gap px-margin-mobile max-w-container-max mx-auto text-center md:text-left gap-unit">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2 justify-center md:justify-start">
+                    <img alt="Logo Rodapé" class="h-8 w-8"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNAGBZUzT_hdAhRk9KwaZwg1FBX1xqxKmBd_Xnmct9CjMmPNcLyukxClmV_Q-gscBCfoJjN_qTlxu_4LZ4dXLxGdFy5VhQc04QxQ51I1nfoRNSsq5rF57hJW_G3fBS-DnfeMvsym-fQsCocN2z_NBgJy0SDqaTZGJPUlkcV4L_RmOSBrYSnqWclxU7pqYtj134mti_kHo7mezjIJB8qJItyETfzrqyJccVhKAYw6_NraviVkLwFL6RyeXvK6DZQDiphKSupJIT9hA" />
+                    <span class="font-headline-sm text-headline-sm font-bold text-primary">Vida Plena Restauração</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Restaurando vidas através do amor,
+                    da fé e do cuidado profissional.</p>
+            </div>
+            <div class="flex gap-8 mt-6 md:mt-0">
+                <a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Privacidade</a>
+                <a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Termos de Uso</a>
+                <a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Contato</a>
+                <a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Localização</a>
+            </div>
+            <div class="mt-8 md:mt-0">
+                <p class="font-body-md text-body-md text-on-surface-variant">© 2024 Igreja Batista Vida Plena - Centro
+                    de Recuperação. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Simple scroll reveal or interaction scripts can be added here
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('header');
+            if (window.scrollY > 50) {
+                nav.classList.add('h-16', 'shadow-md');
+                nav.classList.remove('h-20', 'shadow-sm');
+            } else {
+                nav.classList.remove('h-16', 'shadow-md');
+                nav.classList.add('h-20', 'shadow-sm');
+            }
+        });
+    </script>
+</body>
+
+</html>
